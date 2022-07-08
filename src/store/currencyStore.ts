@@ -35,12 +35,14 @@ export class CurrencyStore {
     }
   };
 
-  setCurrencyList = (currencyList: Currency[]) => {
+  setCurrencyList = (currencyList: Currency[], isConnected: boolean = true) => {
     this.currencyList = currencyList;
-    AsyncStorage.setItem(
-      AsyncStorageKeys.CurrencyList,
-      JSON.stringify(currencyList)
-    );
+    if (isConnected) {
+      AsyncStorage.setItem(
+        AsyncStorageKeys.CurrencyList,
+        JSON.stringify(currencyList)
+      );
+    }
   };
 
   setRequestTime = () => {

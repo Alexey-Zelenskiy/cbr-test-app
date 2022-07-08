@@ -54,7 +54,7 @@ const Main = observer(
     );
 
     const onRefresh = useCallback(() => {
-      setCurrencyList(null);
+      setCurrencyList(null, isConnected);
       fetchCurrencyList(isConnected);
     }, [fetchCurrencyList, setCurrencyList, isConnected]);
 
