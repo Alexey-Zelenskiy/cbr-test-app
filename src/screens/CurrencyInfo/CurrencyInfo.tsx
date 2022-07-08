@@ -24,7 +24,7 @@ const DriverInfo = ({ route }: CurrencyStackScreenProps<'CurrencyInfo'>) => {
 
   const { currency } = params ?? { currency: null };
   const [currentCurrency, setCurrentCurrency] = useState<Currency>(currency);
-  const { charcode, name, nominal, numcode, value } = currentCurrency;
+  const { charCode, name, nominal, numCode, value } = currentCurrency;
 
   useEffect(() => {
     let isMounted = false;
@@ -47,9 +47,9 @@ const DriverInfo = ({ route }: CurrencyStackScreenProps<'CurrencyInfo'>) => {
       <Header title={name} left={false} />
       <View style={styles.container}>
         {name && <Label text="Name" subText={name} />}
-        {charcode && <Label text="Charcode" subText={charcode} />}
+        {charCode && <Label text="Charcode" subText={charCode} />}
         {nominal && <Label text="Nominal" subText={nominal} />}
-        {numcode && <Label text="Numcode" subText={numcode} />}
+        {numCode && <Label text="Numcode" subText={numCode} />}
         {value && <Label text="Value" subText={value} />}
       </View>
     </>

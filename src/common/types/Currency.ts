@@ -1,8 +1,8 @@
 export type Currency = {
   attributes: { id: string };
-  charcode: string;
+  charCode: string;
   name: string;
   nominal: string;
-  numcode: string;
+  numCode: string;
   value: string;
 };
