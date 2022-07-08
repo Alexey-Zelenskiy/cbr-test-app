@@ -77,6 +77,7 @@ const Main = observer(
         <View style={styles.container}>
           {!!currencyList && (
             <FlatList
+              style={{ flex: 1 }}
               ref={refList}
               keyExtractor={keyExtractor}
               data={currencyList}
